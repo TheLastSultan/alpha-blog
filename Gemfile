@@ -58,7 +58,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'sqlite3'
+  gem 'pq'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
