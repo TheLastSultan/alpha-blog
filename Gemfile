@@ -7,7 +7,8 @@ ruby '2.3.1'
 gem 'rails', '~> 5.2.0'
 # Use sqlite3 as the database for Active Record
 
-gem 'pg'
+# gem bcrypt for password
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
