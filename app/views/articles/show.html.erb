@@ -1,5 +1,10 @@
 <div class = "well col-xs-8 col-xs-offset-2">
-    <h2 align = "center", id = show-title> Title: <%= @article.title %></h2>
+    <h3 align = "left", class = "page-header" ,id = "show-title"> <%= @article.title %></h3>
+    <div class = "well-in-well">
+    <p id = "articles-show-author"> Written by: <%= link_to @article.user.username , user_path(@article.user) %>
+        <%= time_ago_in_words(@article.created_at) %> ago.
+    </p> 
+    </div>
     <hr>
     <%= simple_format(@article.description) %>
     <hr>

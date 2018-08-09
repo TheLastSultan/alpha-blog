@@ -74,6 +74,20 @@
 
 // When making a new row, seperate it from the text
 .page-headers{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-family: "Times New Roman", Times, serif;
+}
+
+.listing{
+    list-style: none;
+    padding-left: 0;
+}
+
+.page-header{
+    margin-bottom: 1px;
+    margin-top: 5px; 
+}
+
+#show-title{
+    margin-bottom: 0px;
 }
