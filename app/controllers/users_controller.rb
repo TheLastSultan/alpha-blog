@@ -4,9 +4,10 @@ class UsersController < ApplicationController
     end
 
     def index
-        @users = User.all
+        @users = User.paginate(page: params[:page], per_page: 5)
+        
     end
-    
+
     def create
         @user = User.new(user_params)
         if params["user"]["password"] == params["user"]["password_confirm"]
@@ -29,6 +30,7 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
+        @user_articles = @user.articles.paginate(page: params[:page], per_page: 1)
     end
 
     def update

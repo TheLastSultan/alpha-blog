@@ -1,5 +1,4 @@
 class ArticlesController < ApplicationController
-    protect_from_forgery with: :null_session
 
     def new
         @article = Article.new
@@ -33,7 +32,7 @@ class ArticlesController < ApplicationController
     end 
 
     def index
-        @articles = Article.all
+        @articles = Article.paginate(page: params[:page], per_page: 1)
     end
 
     def destroy

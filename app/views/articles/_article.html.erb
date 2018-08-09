@@ -6,7 +6,7 @@
                     <%= link_to article.title, article_path(article) %>
                 </div>
                 <div class = "article-author">
-                    <small> Created by: <%= article.user.username if article.user%>,
+                    <small> Created by: <%= link_to article.user.username, user_path(article.user) if article.user%>,
                         <%= time_ago_in_words(article.created_at) %> ago,
                         last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
                 </div>
