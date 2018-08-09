@@ -39,7 +39,7 @@ class UsersController < ApplicationController
             if @user.valid?
                 @user.save 
                 redirect_to articles_path
-                flash[:success] = "You have successfully update your account!, #{@user.username}"
+                flash[:success] = "You have successfully update your account, #{@user.username}!"
             else
                 flash[:danger] = "User not successfully updated!"
                 render 'edit'

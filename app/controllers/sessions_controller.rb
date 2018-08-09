@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
         else
             # flash.now becasue it works with "render", which is not a redirect
             # flash[default] works with redirect only
-            flash.now[:danger] = "Login not found, try again yo."
+            flash.now[:danger] = "Use Username: admin , Password: 'greathire' "
             render 'new'
         end
     end

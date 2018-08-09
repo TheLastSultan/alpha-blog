@@ -37,18 +37,26 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form> %>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Signup", signup_path%></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Account Options <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Edit Account</a></li>
-            <li role="separator" class="divider"></li>
-            <li> <%= link_to 'Log out', logout_path, method: :delete %> </li> 
-          </ul>
-        </li>
-      </ul>
+      <% if logged_in? %>
+        <% currentUser = current_user()%>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a href="#"> Welcome, you are logged in as <%=current_user().username%> </a> </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Account Options <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><%= link_to 'Edit User', edit_user_path(currentUser) %></li>
+              <li><%= link_to 'View Articles', user_path(currentUser) %></li>
+              <li role="separator" class="divider"></li>
+              <li> <%= link_to 'Log out', logout_path, method: :delete %> </li> 
+            </ul>
+          </li>
+        </ul>
+      <% else%>
+        <ul class="nav navbar-nav navbar-right">
+          <li> <%= link_to 'Sign Up', signup_path %></li>
+          <li> <%= link_to 'Log in!', login_path %></li>
+        </ul>
+      <% end%>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
