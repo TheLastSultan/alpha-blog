@@ -15,6 +15,7 @@ class UsersController < ApplicationController
         if params["user"]["password"] == params["user"]["password_confirm"]
             if @user.valid?
                 @user.save 
+                session[:user_id] = @user.id
                 redirect_to articles_path
                 flash[:success] = "Welcome, #{@user.username}"
             else
