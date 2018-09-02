@@ -1,7 +1,6 @@
 <h1>Alpha Blog </h1>
 
 This is a fullstack Blog RAILS web application with the following features:
-<br>
 
 <h4> For the User Class: </h4>
 <ul>
@@ -12,8 +11,7 @@ This is a fullstack Blog RAILS web application with the following features:
   <li> USER ARTICLE HISTORY </li>
   <li> USER TOPIC SUBSCRIPTION AND ARTICLE PREFERENCES </li>
 </ul>
-<br>
- 
+
 <h4> For the Article Class: </h4>
 <ul>
   <li> FULL CRUD OPERATIONS ON ARTICLE (CREATE, READ, UPDATE, DESTROY) </li>
