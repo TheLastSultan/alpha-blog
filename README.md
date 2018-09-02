@@ -25,6 +25,10 @@ This is a fullstack Blog RAILS web application with the following features:
   <li> Keeping the logic out of VIEWS and into the CONTROLLER classes </li>
 </ul>
 
-  
+<h3> LIVE LINK TO THE WEBSITE HERE </h3>
+<ul>
+  <li> https://alpha-blog-meezo.herokuapp.com </li>
+</ul>
+
 
 
